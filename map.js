@@ -47,9 +47,9 @@ function updateDownloadLink() {
   combinedLink.href = `assets/data/${variable}.tif`;
   combinedLink.textContent = `Download all years: ${variable}.tif`;
   
-  const combinedLink = document.getElementById('zip-download-link');
-  combinedLink.href = `assets/data/data.zip`;
-  combinedLink.textContent = `Download all data: data.zip`;
+  const zipLink = document.getElementById('zip-download-link');
+  zipLink.href = `assets/data/data.zip`;
+  zipLink.textContent = `Download all data: data.zip`;
 }
 
 function updateVariableInfo() {

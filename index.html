@@ -3,33 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Historical Raster Viewer</title>
+  <title>Functional biosphere integrity data</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
+
 <body>
-  <h1>Historical Raster Viewer</h1>
+  <header>
+    <img src="assets/logo.png" alt="Logo" />
+  <h1>View and download functional biosphere integrity data based on biospheremetrics EcoRisk and HANPP<sup>Hol</sup> </h1>
+  </header>
+  
+<div class="intro-text">
+  <p>
+    This viewer displays global raster datasets from <strong>1600 to 2014</strong>, including ecological risk indicators,
+    human appropriation of net primary production (<em>HANPP</em>), and planetary boundary metrics. Use the selectors
+    below to explore different variables and download data as PNG or GeoTIFF files.
+  </p>
+  <p>    
+    Suggested citation:<br> 
+    Stenzel et al. 2025
+    <a href="https://doi.org/10.5281/zenodo.15806793">https://doi.org/10.5281/zenodo.15806793</a> <br>
+  </p>
+</div>
 
   <div class="controls">
     <label for="variable-select">Select Variable:</label>
     <select id="variable-select">
       <option value="hanpp_total">hanpp_total</option><option value="hanpp_npp_pot">hanpp_npp_pot</option><option value="hanpp_npp_act">hanpp_npp_act</option><option value="hanpp_luc">hanpp_luc</option><option value="hanpp_hol_cv">hanpp_hol_cv</option><option value="hanpp_harv">hanpp_harv</option><option value="ecorisk_total_cv">ecorisk_total_cv</option><option value="ecorisk_vs">ecorisk_vs</option><option value="ecorisk_lc">ecorisk_lc</option><option value="ecorisk_gi">ecorisk_gi</option><option value="ecorisk_eb">ecorisk_eb</option><option value="pb_risk">pb_risk</option>
-    </select>
+      </select>
 
     <label for="year-select">Select Year:</label>
     <select id="year-select">
-      <option value="1600">1600</option><option value="1650">1650</option><option value="1700">1700</option><option value="1750">1750</option><option value="1800">1800</option><option value="1850">1850</option><option value="1900">1900</option><option value="1950">1950</option><option value="2000">2000</option><option value="2010">2010</option><option value="2014">2014</option>
+           <option value="1600">1600</option><option value="1650">1650</option><option value="1700">1700</option><option value="1750">1750</option><option value="1800">1800</option><option value="1850">1850</option><option value="1900">1900</option><option value="1950">1950</option><option value="2000">2000</option><option value="2010">2010</option><option value="2014">2014</option>
     </select>
 
-<div class="variable-info">
-  <p id="description-text"></p>
-  <p id="unit-text" style="font-weight: bold;"></p>
-</div>
+    <div>
+      <a id="download-link" href="#" download>Download</a>
+      <a id="combined-download-link" href="#" download>Download all years</a>
+      <a id="zip-download-link" href="#" download>Download all variables and years</a>
+    </div>
+  </div>
 
-    <div><a id="download-link" href="#" download>Download</a></div>
-    <div><a id="combined-download-link" href="#" download>Download all years</a></div>
-    <div><a id="zip-download-link" href="#" download>Download all data as zip</a></div>
+  <div class="variable-info">
+    <p id="description-text"></p>
+    <p id="unit-text" style="font-weight: bold;"></p>
   </div>
 
   <div id="map"></div>
