@@ -69,6 +69,33 @@ header h1 {
   color: #2d4739;
 }
 
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 1em;
+  background-color: #e8f5ec;
+  border-top: 1px solid #c3e6d3;
+  color: #2d4739;
+}
+
+footer a {
+  color: #2d4739;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.page-content {
+  padding: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05em;
+  color: #2d4739;
+}
+
 #map {
-  height: 80vh;
+  height: 60vh;
 }

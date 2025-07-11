@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Functional biosphere integrity data</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/vnd.microsoft.icon">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -11,7 +12,7 @@
 
 <body>
   <header>
-    <img src="assets/logo.png" alt="Logo" />
+    <a href="index.html"><img src="assets/logo.png" alt="Logo" /></a>
   <h1>View and download functional biosphere integrity data based on biospheremetrics EcoRisk and HANPP<sup>Hol</sup> </h1>
   </header>
   
@@ -31,7 +32,20 @@
   <div class="controls">
     <label for="variable-select">Select Variable:</label>
     <select id="variable-select">
-      <option value="hanpp_total">hanpp_total</option><option value="hanpp_npp_pot">hanpp_npp_pot</option><option value="hanpp_npp_act">hanpp_npp_act</option><option value="hanpp_luc">hanpp_luc</option><option value="hanpp_hol_cv">hanpp_hol_cv</option><option value="hanpp_harv">hanpp_harv</option><option value="ecorisk_total_cv">ecorisk_total_cv</option><option value="ecorisk_vs">ecorisk_vs</option><option value="ecorisk_lc">ecorisk_lc</option><option value="ecorisk_gi">ecorisk_gi</option><option value="ecorisk_eb">ecorisk_eb</option><option value="pb_risk">pb_risk</option>
+<option value="pb_risk_hanpp">pb_risk_hanpp</option>
+<option value="pb_risk_ecorisk">pb_risk_ecorisk</option>
+<option value="pb_risk_combined">pb_risk_combined</option>
+<option value="hanpp_hol_cv">hanpp_hol_cv</option>
+<option value="hanpp_total">hanpp_total</option>
+<option value="hanpp_npp_pot">hanpp_npp_pot</option>
+<option value="hanpp_npp_act">hanpp_npp_act</option>
+<option value="hanpp_luc">hanpp_luc</option>
+<option value="hanpp_harv">hanpp_harv</option>
+<option value="ecorisk_total_cv">ecorisk_total_cv</option>
+<option value="ecorisk_vs">ecorisk_vs</option>
+<option value="ecorisk_lc">ecorisk_lc</option>
+<option value="ecorisk_gi">ecorisk_gi</option>
+<option value="ecorisk_eb">ecorisk_eb</option>
       </select>
 
     <label for="year-select">Select Year:</label>
@@ -54,5 +68,13 @@
   <div id="map"></div>
 
   <script src="map.js"></script>
+
+<footer>
+  <p>
+    <a href="impressum.html">Impressum</a> |
+    <a href="privacy.html">Data Protection</a> |
+    <a href="accessibility.html">Accessibility</a>
+  </p>
+</footer>
 </body>
 </html>
