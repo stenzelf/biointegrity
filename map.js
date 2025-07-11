@@ -77,15 +77,15 @@ const variableInfo = {
     unit: "gC/m²/yr"
   },
   hanpp_hol_cv: {
-    description: "HANPP_hol",
+    description: "HANPP with respect to reference NPP",
     unit: "fraction of preindustrial potential NPP"
   },
   hanpp_harv: {
-    description: "HANPP component: harvest",
+    description: "HANPP component: harvest (biomass extraction for crops, residues, grassland, timber)",
     unit: "gC/m²/yr"
   },
   ecorisk_total_cv: {
-    description: "EcoRisk average",
+    description: "EcoRisk (average of vs, lc, gi, eb)",
     unit: "[0-1]"
   },
   ecorisk_vs: {
@@ -105,7 +105,7 @@ const variableInfo = {
     unit: "[0-1]"
   },
   pb_risk_combined: {
-    description: "Combined local boundary status",
+    description: "Combined local boundary status (at least one of HANPP_Hol or EcoRisk)",
     unit: "[0-1]"
   },
   pb_risk_hanpp: {
