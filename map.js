@@ -104,8 +104,16 @@ const variableInfo = {
     description: "EcoRisk: ecosystem balance",
     unit: "[0-1]"
   },
-  pb_risk: {
+  pb_risk_combined: {
     description: "Combined local boundary status",
+    unit: "[0-1]"
+  },
+  pb_risk_hanpp: {
+    description: "Local boundary status based on HANPP_hol",
+    unit: "[0-1]"
+  },
+  pb_risk_ecorisk: {
+    description: "Local boundary status based on EcoRisk",
     unit: "[0-1]"
   }
 };
