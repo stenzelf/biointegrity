@@ -1,6 +1,9 @@
 // map.js
 
-const map = L.map('map').setView([0, 0], 2);
+const map = L.map('map', {
+    center: [0, 0],
+    zoom: 3
+});
 
 //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //  maxZoom: 10,
@@ -13,7 +16,7 @@ function showOverlay(variable, year) {
     map.removeLayer(currentOverlay);
   }
   const url = `assets/data/${variable}_${year}.png`;
-  const bounds = [[-40, -250], [90, 250]];
+  const bounds = [[-60, -180], [60, 180]];
   currentOverlay = L.imageOverlay(url, bounds, { opacity: 1 });
   currentOverlay.addTo(map);
   map.fitBounds(bounds);
