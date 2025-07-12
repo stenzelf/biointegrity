@@ -58,7 +58,7 @@ function updateDownloadLink() {
 function updateVariableInfo() {
   const variable = document.getElementById('variable-select').value;
   const info = variableInfo[variable];
-  document.getElementById('description-text').textContent = info.description;
+  document.getElementById('description-text').innerHTML = info.description;
   document.getElementById('unit-text').textContent = `Unit: ${info.unit}`;
 }
 
@@ -108,11 +108,11 @@ const variableInfo = {
     unit: "[0-1]"
   },
   pb_risk_combined: {
-    description: "Combined local boundary status (at least one of HANPP_Hol or EcoRisk)",
+    description: "Combined local boundary status (at least one of HANPP<sup>Hol</sup> or EcoRisk)",
     unit: "[0-1]"
   },
   pb_risk_hanpp: {
-    description: "Local boundary status based on HANPP_hol",
+    description: "Local boundary status based on HANPP<sup>Hol</sup>",
     unit: "[0-1]"
   },
   pb_risk_ecorisk: {

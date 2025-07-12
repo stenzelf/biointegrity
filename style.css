@@ -86,6 +86,10 @@ header h1 {
   border-radius: 4px;
 }
 
+#unit-text {
+  margin-left: 0.5em;
+}
+
 footer {
   text-align: center;
   font-size: 0.9em;
