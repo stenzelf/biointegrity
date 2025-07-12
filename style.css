@@ -61,12 +61,29 @@ header h1 {
 }
 
 .intro-text {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   padding: 1em 2em;
-  font-size: 1.1em;
   background-color: #f0fdf5;
   border-bottom: 1px solid #c3e6d3;
   color: #2d4739;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.intro-main {
+  flex: 3;
+  min-width: 250px;
+}
+
+.intro-citation {
+  flex: 1;
+  min-width: 200px;
+  font-size: 0.9em;
+  background-color: #e8f5ec;
+  padding: 0.8em;
+  border-left: 3px solid #a8d5ba;
+  border-radius: 4px;
 }
 
 footer {
@@ -97,5 +114,5 @@ footer a:hover {
 }
 
 #map {
-  height: 55vh;
+  height: 60vh;
 }
