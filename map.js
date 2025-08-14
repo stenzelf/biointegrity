@@ -42,17 +42,21 @@ function updateDownloadLink() {
   const variable = document.getElementById('variable-select').value;
   const year = document.getElementById('year-select').value;
 
+  const pngLink = document.getElementById('download-link-png');
+  pngLink.href = `assets/data/${variable}_${year}.png`;
+  pngLink.textContent = `${variable}_${year}.png`;
+
   const singleLink = document.getElementById('download-link');
   singleLink.href = `assets/data/${variable}_${year}.tif`;
-  singleLink.textContent = `Download: ${variable}_${year}.tif`;
+  singleLink.textContent = `${variable}_${year}.tif`;
 
   const combinedLink = document.getElementById('combined-download-link');
   combinedLink.href = `assets/data/${variable}.tif`;
-  combinedLink.textContent = `Download all years: ${variable}.tif`;
+  combinedLink.textContent = `${variable}.tif`;
   
   const zipLink = document.getElementById('zip-download-link');
   zipLink.href = `assets/data/data.zip`;
-  zipLink.textContent = `Download all data: data.zip`;
+  zipLink.textContent = `data.zip`;
 }
 
 function updateVariableInfo() {
