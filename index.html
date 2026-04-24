@@ -20,8 +20,8 @@
 <div class="intro-text">
   <div class="intro-main">
     <p>
-    This viewer displays global functional biosphere integrity raster datasets from <strong>1600 to 2014</strong>, including risk for biosphere destabilization (<strong><em>EcoRisk</em></strong>), human appropriation of net primary production (<strong><em>HANPP</em></strong>), and derived planetary boundary metrics developed in <a href="https://doi.org/10.1016/j.oneear.2025.101393">Stenzel et al. 2025: Breaching planetary boundaries</a>. The metrics are based on simulations with the vegetation model LPJmL. The thresholds determining the risk-level for the planetary boundary are (safe/intermediate; intermediate/high risk): HANPP<sup>Hol</sup> (0.05; 0.23), EcoRisk (0.35; 0.55).<br> 
-Use the selectors below to explore the different variables and years and download the maps as png or GeoTIFF data file for post-processing (no color palette embedded).
+    This viewer displays global functional biosphere integrity maps and timelines from <strong>1600 to 2014</strong>, including risk for biosphere destabilization (<strong><em>EcoRisk</em></strong>), human appropriation of net primary production (<strong><em>HANPP</em></strong>), and derived planetary boundary metrics developed in <a href="https://doi.org/10.1016/j.oneear.2025.101393">Stenzel et al. 2025: Breaching planetary boundaries</a>. The metrics are based on simulations with the vegetation model LPJmL. The thresholds determining the risk-level for the planetary boundary are (safe/intermediate; intermediate/high risk): HANPP<sup>Hol</sup> (0.05; 0.23), EcoRisk (0.35; 0.55).<br> 
+Use the selectors below to explore the different variables and years and download the maps as png or the raw data as GeoTIFF data file (maps - no color palette embedded) or csv (timelines).
     </p>
   </div>
   <div class="intro-citation">
@@ -53,6 +53,8 @@ Use the selectors below to explore the different variables and years and downloa
 <option value="ecorisk_lc">EcoRisk local change</option>
 <option value="ecorisk_gi">EcoRisk global importance</option>
 <option value="ecorisk_eb">EcoRisk ecosystem balance</option>
+<option value="timeline_combined">Timeline: area transgressed - combined </option>
+<option value="timeline_separate">Timeline: area transgressed - separate</option>
       </select>
 
     <label for="year-select">Select Year:</label>
@@ -86,9 +88,11 @@ Total data:
     <a id="unit-text" style="font-weight: bold;"></a>
   </div>
 
-  <div id="map"></div>
+  <div id="image-container">
+  <img id="raster-image" src="" alt="Raster visualization" />
+</div>
 
-  <script src="map.js"></script>
+  <script src="viewer.js"></script>
 
 <footer>
 
